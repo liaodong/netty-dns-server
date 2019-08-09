@@ -6,11 +6,12 @@ import io.netty.channel.ChannelHandlerContext;
 import io.netty.channel.SimpleChannelInboundHandler;
 import io.netty.handler.codec.dns.*;
 
+import java.util.HashMap;
 import java.util.Map;
 
 public class DnsHandler extends SimpleChannelInboundHandler<DatagramDnsQuery> {
 
-    private Map<String, byte[]> domainIpMapping = Map.of();
+    private Map<String, byte[]> domainIpMapping = new HashMap<>();
 
     public DnsHandler() {
         // 本地加一些临时数据，正确做法是入库

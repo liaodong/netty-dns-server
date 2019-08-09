@@ -9,6 +9,9 @@ import io.netty.channel.socket.nio.NioDatagramChannel;
 import io.netty.handler.codec.dns.DatagramDnsQueryDecoder;
 import io.netty.handler.codec.dns.DatagramDnsResponseEncoder;
 
+/**
+ * 简单的 DNS Server, 测试：nslookup www.qq.com. localhost
+ */
 public class DnsServer {
 
     // DNS Server 国际标准 53 端口
